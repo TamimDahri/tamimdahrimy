@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tamim Dahri — Aktivis tanah & pembina teknologi</title>
+<meta name="description" content="Tamim Dahri: aktivis tanah bersama Pertubuhan Literasi Tanah, pengasas bersama tanahmalaya.org dan pembina teknologi di Lembah Klang.">
+<meta property="og:title" content="Tamim Dahri">
+<meta property="og:description" content="Aktivis tanah · Pembina teknologi · Usahawan. Menjadikan data tanah boleh difahami semua.">
+<meta property="og:image" content="https://tamimdahri.my/assets/og.jpg">
+<meta property="og:url" content="https://tamimdahri.my">
+<meta property="og:type" content="profile">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://tamimdahri.my">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231f3a2e'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' fill='%23f3ede1' text-anchor='middle' font-style='italic'%3Etd%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f3ede1; --paper-2:#ebe3d3; --ink:#1c1f1a; --ink-2:#4a4d45; --ink-3:#7c7d72;
+    --forest:#1f3a2e; --clay:#b4532a; --line:#d6ccb7; --line-2:#c4b89f;
+    --serif:"Fraunces",Georgia,serif; --sans:"Instrument Sans",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;overflow-x:hidden}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;
+    background-image:repeating-linear-gradient(0deg,transparent 0 119px,rgba(31,58,46,.05) 119px 120px),repeating-linear-gradient(90deg,transparent 0 119px,rgba(31,58,46,.05) 119px 120px);}
+  a{color:inherit}
+  ::selection{background:var(--forest);color:var(--paper)}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+  html:not([lang=en]) [data-en], html[lang=en] [data-ms]{display:none !important}
+
+  /* top bar */
+  header.bar{position:sticky;top:0;z-index:10;background:rgba(243,237,225,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .bar .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:20px}
+  .mark{font-family:var(--serif);font-size:20px;font-style:italic;text-decoration:none;letter-spacing:-.01em}
+  .mark b{font-style:normal;font-weight:600}
+  nav.links{display:flex;gap:26px;font-size:14px}
+  nav.links a{text-decoration:none;color:var(--ink-2)} nav.links a:hover{color:var(--clay)}
+  .lang{display:flex;border:1px solid var(--line-2);border-radius:999px;overflow:hidden;font-family:var(--mono);font-size:12px}
+  .lang button{background:none;border:0;padding:5px 11px;cursor:pointer;color:var(--ink-2);font:inherit}
+  .lang button[aria-pressed=true]{background:var(--forest);color:var(--paper)}
+
+  /* hero */
+  .hero{padding:72px 0 56px;border-bottom:1px solid var(--line)}
+  .hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:64px;align-items:end}
+  .coord{font-family:var(--mono);font-size:12px;color:var(--ink-3);letter-spacing:.04em;text-transform:uppercase;display:flex;gap:18px;flex-wrap:wrap;margin-bottom:34px}
+  .coord span::before{content:"";display:inline-block;width:7px;height:7px;border:1px solid var(--clay);margin-right:8px;transform:translateY(-1px)}
+  h1{font-family:var(--serif);font-weight:400;font-size:clamp(64px,10.5vw,148px);line-height:.88;letter-spacing:-.035em;font-variation-settings:"opsz" 144}
+  h1 em{font-weight:300;color:var(--forest)}
+  .roles{margin-top:30px;font-family:var(--serif);font-size:clamp(20px,2.2vw,26px);line-height:1.35;color:var(--ink-2);max-width:30ch;font-weight:300}
+  .roles strong{font-weight:500;color:var(--ink)}
+  .hero-cta{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border-radius:2px;text-decoration:none;font-size:15px;font-weight:500;border:1px solid var(--forest)}
+  .btn.solid{background:var(--forest);color:var(--paper)} .btn.solid:hover{background:var(--ink)}
+  .btn.ghost:hover{background:var(--paper-2)}
+  figure.portrait{position:relative}
+  figure.portrait .frame{aspect-ratio:3/4;overflow:hidden;border:1px solid var(--ink);background:var(--paper-2)}
+  figure.portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;display:block;filter:saturate(.85) contrast(1.02)}
+  figure.portrait::before{content:"";position:absolute;inset:-12px 12px 12px -12px;border:1px dashed var(--clay);z-index:-1}
+  figure.portrait figcaption{font-family:var(--mono);font-size:11px;color:var(--ink-3);margin-top:10px;display:flex;justify-content:space-between}
+
+  /* sections */
+  section{padding:88px 0;border-bottom:1px solid var(--line)}
+  .sec-head{display:grid;grid-template-columns:200px 1fr;gap:40px;margin-bottom:48px;align-items:baseline}
+  .lot{font-family:var(--mono);font-size:12px;color:var(--clay);letter-spacing:.06em;text-transform:uppercase}
+  h2{font-family:var(--serif);font-weight:400;font-size:clamp(36px,4.6vw,56px);line-height:1.02;letter-spacing:-.02em;max-width:18ch}
+  h2 em{color:var(--forest);font-weight:300}
+  .body-grid{display:grid;grid-template-columns:200px 1fr;gap:40px}
+  .lede{font-family:var(--serif);font-size:clamp(21px,2.1vw,25px);line-height:1.45;font-weight:300;max-width:34ch}
+  .prose{max-width:62ch;color:var(--ink-2)} .prose p+p{margin-top:1em}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+
+  /* land work */
+  .parcels{display:grid;grid-template-columns:repeat(6,1fr);border-top:1px solid var(--ink);border-left:1px solid var(--ink)}
+  .parcel{border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:26px 24px 28px;position:relative;background:rgba(243,237,225,.6)}
+  .parcel.w3{grid-column:span 3}.parcel.w2{grid-column:span 2}.parcel.w4{grid-column:span 4}
+  .parcel .no{font-family:var(--mono);font-size:11px;color:var(--ink-3);position:absolute;top:12px;right:14px}
+  .parcel h3{font-family:var(--serif);font-weight:500;font-size:23px;line-height:1.15;margin-bottom:10px;letter-spacing:-.01em;padding-right:40px}
+  .parcel p{font-size:15.5px;color:var(--ink-2)}
+  .parcel .tag{display:inline-block;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--forest);border:1px solid var(--forest);padding:2px 8px;margin-bottom:14px}
+  .parcel a.more{display:inline-block;margin-top:14px;font-size:14px;font-weight:500;color:var(--clay);text-decoration:none;border-bottom:1px solid currentColor}
+  .parcel.feature{background:var(--forest);color:var(--paper)}
+  .parcel.feature p{color:#cfd6cc}.parcel.feature .no{color:#9fb0a4}.parcel.feature .tag{color:#e9c9a8;border-color:#e9c9a8}
+  .parcel.feature a.more{color:#f0b58f}
+  .parcel.feature h3{font-size:30px}
+
+  /* projects */
+  .projects{list-style:none;border-top:1px solid var(--ink)}
+  .projects li{display:grid;grid-template-columns:60px minmax(0,320px) minmax(0,1fr) 190px;gap:28px;padding:26px 0;border-bottom:1px solid var(--line-2);align-items:baseline}
+  .projects .n{font-family:var(--mono);font-size:12px;color:var(--ink-3)}
+  .projects h3{font-family:var(--serif);font-weight:500;font-size:26px;letter-spacing:-.01em;line-height:1.1}
+  .projects h3 small{display:block;font-family:var(--mono);font-size:11px;font-weight:400;color:var(--clay);letter-spacing:.05em;text-transform:uppercase;margin-top:8px}
+  .projects p{color:var(--ink-2);font-size:15.5px}
+  .projects a.go{text-align:right;font-family:var(--mono);font-size:13px;text-decoration:none;color:var(--forest);white-space:nowrap}
+  .projects a.go:hover{color:var(--clay)}
+
+  /* skills */
+  .skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+  .skills span{font-size:14.5px;padding:7px 14px;border:1px solid var(--line-2);border-radius:999px;background:var(--paper)}
+
+  /* media */
+  .press{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .press a{display:flex;flex-direction:column;text-decoration:none;border-top:3px solid var(--ink);padding-top:18px;min-height:230px}
+  .press .src{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-3);display:flex;justify-content:space-between}
+  .press h3{font-family:var(--serif);font-weight:400;font-size:23px;line-height:1.22;margin:14px 0 12px;letter-spacing:-.01em}
+  .press p{font-size:15px;color:var(--ink-2);flex:1}
+  .press .read{margin-top:16px;font-size:14px;font-weight:500;color:var(--clay)}
+  .press a:hover h3{color:var(--forest);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
+
+  /* contact */
+  .contact{background:var(--forest);color:var(--paper);border-bottom:0}
+  .contact h2 em{color:#e9c9a8}
+  .contact .lot{color:#e9c9a8}
+  .contact .mail{font-family:var(--serif);font-size:clamp(28px,4.4vw,54px);font-weight:300;letter-spacing:-.02em;text-decoration:none;border-bottom:1px solid rgba(243,237,225,.4);display:inline-block;line-height:1.15;word-break:break-word}
+  .contact .mail:hover{border-color:var(--paper)}
+  .socials{display:grid;grid-template-columns:repeat(2,1fr);column-gap:40px;margin-top:56px;border-top:1px solid rgba(243,237,225,.25)}
+  .socials a{padding:22px 0;text-decoration:none;border-bottom:1px solid rgba(243,237,225,.25);display:flex;justify-content:space-between;padding-right:24px;font-size:15px}
+  .socials a span{font-family:var(--mono);font-size:12px;color:#9fb0a4}
+  .socials a:hover{color:#f0b58f}
+  footer{background:var(--forest);color:#9fb0a4;font-family:var(--mono);font-size:12px;padding:28px 0 40px;border-top:1px solid rgba(243,237,225,.15)}
+  footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  footer a{color:#cfd6cc;text-decoration:none}
+
+  @media (max-width:900px){
+    nav.links{display:none}
+    .hero{padding-top:44px}
+    .hero .wrap{grid-template-columns:1fr;gap:44px}
+    figure.portrait{max-width:420px}
+    .sec-head,.body-grid{grid-template-columns:1fr;gap:16px}
+    .two{grid-template-columns:1fr;gap:28px}
+    .parcels{grid-template-columns:1fr}
+    .parcel.w2,.parcel.w3,.parcel.w4{grid-column:span 1}
+    .projects li{grid-template-columns:1fr;gap:8px}
+    .projects .n{display:none}
+    .press{grid-template-columns:1fr}
+    .press a{min-height:0}
+    .socials{grid-template-columns:1fr;column-gap:0}
+    .contact .mail{font-size:26px}
+    section{padding:64px 0}
+  }
+  @media print{header.bar,.lang,.hero-cta{display:none} body{background:#fff}}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <a href="#top" class="mark">tamim <b>dahri</b></a>
+    <nav class="links">
+      <a href="#tentang"><span data-ms>Tentang</span><span data-en>About</span></a>
+      <a href="#tanah"><span data-ms>Kerja tanah</span><span data-en>Land work</span></a>
+      <a href="#projek"><span data-ms>Projek</span><span data-en>Projects</span></a>
+      <a href="#media"><span data-ms>Media</span><span data-en>Press</span></a>
+      <a href="#hubungi"><span data-ms>Hubungi</span><span data-en>Contact</span></a>
+    </nav>
+    <div class="lang" role="group" aria-label="Bahasa / Language">
+      <button type="button" data-set-lang="ms" aria-pressed="true">BM</button>
+      <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <div class="coord">
+          <span>Lembah Klang, Malaysia</span>
+          <span data-ms>Pertubuhan Literasi Tanah</span><span data-en>Land Literacy Society</span>
+        </div>
+        <h1>Tamim<br><em>Dahri.</em></h1>
+        <p class="roles" data-ms><strong>Aktivis tanah</strong>, pembina perisian dan usahawan. Saya menjadikan data tanah sesuatu yang boleh dibaca, difahami dan dipertahankan oleh rakyat.</p>
+        <p class="roles" data-en><strong>Land activist</strong>, software builder and entrepreneur. I make land data something ordinary people can read, understand and defend.</p>
+        <div class="hero-cta">
+          <a class="btn solid" href="https://tanahmalaya.org" target="_blank" rel="noopener"><span data-ms>Terokai GIS Tanah Malaya</span><span data-en>Explore the Tanah Malaya GIS</span> ↗</a>
+          <a class="btn ghost" href="#hubungi"><span data-ms>Hubungi saya</span><span data-en>Get in touch</span></a>
+        </div>
+      </div>
+      <figure class="portrait">
+        <div class="frame">
+          <picture>
+            <source srcset="assets/tamim.webp" type="image/webp">
+            <img src="assets/tamim.jpg" alt="Tamim Dahri" width="900" height="1200">
+          </picture>
+        </div>
+        <figcaption><span>TD/01</span><span>Tamim Dahri</span></figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <section id="tentang">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="lot">Lot 01 — <span data-ms>Tentang</span><span data-en>About</span></div>
+        <h2 data-ms>Tanah bukan sekadar harta. Ia <em>amanah.</em></h2>
+        <h2 data-en>Land is not just property. It is a <em>trust.</em></h2>
+      </div>
+      <div class="body-grid">
+        <div></div>
+        <div class="two">
+          <p class="lede" data-ms>Saya mewakili Pertubuhan Literasi Tanah, sebuah pertubuhan yang membantu orang ramai memahami status, sempadan dan hak ke atas tanah mereka.</p>
+          <p class="lede" data-en>I represent Pertubuhan Literasi Tanah (Land Literacy Society), which helps the public understand the status, boundaries and rights attached to their land.</p>
+          <div class="prose">
+            <div data-ms>
+              <p>Saya pengasas bersama <a href="https://tanahmalaya.org" target="_blank" rel="noopener">tanahmalaya.org</a> dan pengasas tanahmalaya.com. Antara usaha utama kami ialah sistem GIS tanah rizab Melayu: peta interaktif yang menghimpunkan data rizab supaya sesiapa sahaja boleh menyemaknya sendiri.</p>
+              <p>Agenda jangka panjang saya mudah: <strong>beli, bersihkan dan wakafkan</strong> tanah, supaya tanah umat kekal produktif dan terpelihara untuk generasi akan datang.</p>
+              <p>Di luar kerja tanah, saya membina perisian, sistem IoT dan perniagaan. Kemahiran itu yang saya bawa ke dalam perjuangan ini.</p>
+            </div>
+            <div data-en>
+              <p>I co-founded <a href="https://tanahmalaya.org" target="_blank" rel="noopener">tanahmalaya.org</a> and founded tanahmalaya.com. Our flagship work is a GIS of Malay reserve land: an interactive map that brings reserve data together so anyone can check it for themselves.</p>
+              <p>My long-term agenda is simple: <strong>buy, clean up and endow (wakaf)</strong> land, so that community land stays productive and protected for future generations.</p>
+              <p>Outside land work, I build software, IoT systems and businesses, and I bring those skills to this cause.</p>
+            </div>
+            <div class="skills">
+              <span data-ms>Pembangunan perisian</span><span data-en>Software development</span>
+              <span>IoT</span>
+              <span>GIS</span>
+              <span data-ms>Pembangunan perniagaan</span><span data-en>Business development</span>
+              <span data-ms>Pengurusan hartanah</span><span data-en>Property management</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tanah">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="lot">Lot 02 — <span data-ms>Kerja tanah</span><span data-en>Land work</span></div>
+        <h2 data-ms>Data dahulu, <em>kemudian</em> suara.</h2>
+        <h2 data-en>Data first, <em>then</em> a voice.</h2>
+      </div>
+      <div class="parcels">
+        <div class="parcel w4 feature">
+          <span class="no">PT 001</span>
+          <span class="tag">tanahmalaya.org</span>
+          <h3 data-ms>GIS Tanah Rizab Melayu</h3>
+          <h3 data-en>Malay Reserve Land GIS</h3>
+          <p data-ms>Platform digital yang menggabungkan data tanah, peta interaktif dan analisis spatial tentang status, sempadan dan guna tanah rizab Melayu. Maklumat yang dahulunya tersimpan dalam warta dan fail kini boleh dilihat di atas peta.</p>
+          <p data-en>A digital platform that combines land data, interactive maps and spatial analysis of Malay reserve land: its status, boundaries and use. Information once buried in gazettes and files can now be seen on a map.</p>
+          <a class="more" href="https://tanahmalaya.org" target="_blank" rel="noopener"><span data-ms>Buka peta</span><span data-en>Open the map</span> ↗</a>
+        </div>
+        <div class="parcel w2">
+          <span class="no">PT 002</span>
+          <span class="tag">PLT</span>
+          <h3>Pertubuhan Literasi Tanah</h3>
+          <p data-ms>Mendidik orang ramai tentang hak, status dan prosedur tanah, dan membantu pemilik tanah berurusan dengan pihak berkuasa.</p>
+          <p data-en>Educating the public on land rights, status and procedures, and helping landowners deal with the authorities.</p>
+        </div>
+        <div class="parcel w2">
+          <span class="no">PT 003</span>
+          <span class="tag" data-ms>Wakaf</span><span class="tag" data-en>Endowment</span>
+          <h3 data-ms>Pemetaan tanah wakaf</h3>
+          <h3 data-en>Mapping wakaf land</h3>
+          <p data-ms>Membawa pendekatan GIS yang sama kepada tanah wakaf, supaya setiap lot wakaf boleh dikenal pasti, dipantau dan dimanfaatkan.</p>
+          <p data-en>Bringing the same GIS approach to wakaf (endowment) land, so every wakaf lot can be identified, monitored and put to good use.</p>
+        </div>
+        <div class="parcel w2">
+          <span class="no">PT 004</span>
+          <span class="tag" data-ms>Kajian</span><span class="tag" data-en>Research</span>
+          <h3 data-ms>Enakmen Rizab Melayu</h3>
+          <h3 data-en>Malay Reservation Enactments</h3>
+          <p data-ms>Membandingkan enakmen rizab Melayu setiap negeri, dengan cadangan untuk menyelaras dan memperkukuh perlindungan yang masih lemah.</p>
+          <p data-en>Comparing each state's Malay Reservation Enactment, with proposals to harmonise them and strengthen the weaker protections.</p>
+        </div>
+        <div class="parcel w2">
+          <span class="no">PT 005</span>
+          <span class="tag" data-ms>Dasar</span><span class="tag" data-en>Policy</span>
+          <h3 data-ms>Cadangan RCI pencerobohan tanah</h3>
+          <h3 data-en>Proposed RCI on encroachment</h3>
+          <p data-ms>Menggesa Suruhanjaya Siasatan Diraja untuk meneliti pencerobohan tanah dan pembinaan tanpa kebenaran, termasuk kesannya terhadap hasil negeri.</p>
+          <p data-en>Calling for a Royal Commission of Inquiry into land encroachment and unauthorised construction, including their cost to state revenue.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projek">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="lot">Lot 03 — <span data-ms>Projek</span><span data-en>Projects</span></div>
+        <h2 data-ms>Perkara yang saya <em>bina.</em></h2>
+        <h2 data-en>Things I <em>build.</em></h2>
+      </div>
+      <ul class="projects">
+        <li>
+          <span class="n">01</span>
+          <h3>gerantanah.com<small data-ms>Teknologi tanah</small><small data-en>Land tech</small></h3>
+          <p data-ms>Projek digital berkaitan geran dan maklumat tanah, sebahagian daripada usaha menjadikan urusan tanah lebih telus.</p>
+          <p data-en>A digital project around land titles and land information, part of the push to make land matters more transparent.</p>
+          <a class="go" href="https://gerantanah.com" target="_blank" rel="noopener">gerantanah.com ↗</a>
+        </li>
+        <li>
+          <span class="n">02</span>
+          <h3>Syumul<small>Religion as a Service</small></h3>
+          <p data-ms>Platform Islamik yang menyatukan halal, wakaf, qurban, solat, al-Quran, ustaz on demand dan pelancongan Muslim. Turut membina app white-label untuk organisasi.</p>
+          <p data-en>An Islamic platform bringing together halal, wakaf, qurban, prayer, Quran, on-demand ustaz and Muslim travel. Also builds white-label apps for organisations.</p>
+          <a class="go" href="https://syumul.com" target="_blank" rel="noopener">syumul.com ↗</a>
+        </li>
+        <li>
+          <span class="n">03</span>
+          <h3>Cameron Strawberry<small data-ms>Sejak 2020</small><small data-en>Since 2020</small></h3>
+          <p data-ms>Penghantaran strawberi segar dari ladang di Cameron Highlands terus ke pelanggan di sekitar Lembah Klang setiap minggu.</p>
+          <p data-en>Fresh strawberries from a Cameron Highlands farm, delivered weekly to customers across the Klang Valley.</p>
+          <a class="go" href="https://cameronstrawberry.com" target="_blank" rel="noopener">cameronstrawberry.com ↗</a>
+        </li>
+        <li>
+          <span class="n">04</span>
+          <h3>Destroy a Building<small data-ms>Game Roblox</small><small data-en>Roblox game</small></h3>
+          <p data-ms>Game perobohan bangunan di Roblox: projek kreatif yang dibina sendiri, lengkap dengan komuniti pemain.</p>
+          <p data-en>A building-demolition game on Roblox: a self-built creative project with its own player community.</p>
+          <span></span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="media">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="lot">Lot 04 — <span data-ms>Media</span><span data-en>Press</span></div>
+        <h2 data-ms>Dalam <em>media.</em></h2>
+        <h2 data-en>In the <em>press.</em></h2>
+      </div>
+      <div class="press">
+        <a href="https://www.sinarharian.com.my/article/769748/berita/nasional/tanah-bukan-harta-dunia-tapi-amanah" target="_blank" rel="noopener">
+          <div class="src"><span>Sinar Harian</span><span>28.02.2026</span></div>
+          <h3>“Tanah bukan harta dunia, tapi amanah”</h3>
+          <p data-ms>Tentang agenda jangka panjang saya untuk membeli, membersih dan mewakafkan tanah bagi menangani isu pencerobohan.</p>
+          <p data-en>On my long-term agenda to buy, clean up and endow land as a way to tackle encroachment.</p>
+          <span class="read"><span data-ms>Baca</span><span data-en>Read (Malay)</span> ↗</span>
+        </a>
+        <a href="https://www.sinarharian.com.my/article/769865/berita/wawancara/antara-kuil-tanah-dan-persoalan-cinta-negara" target="_blank" rel="noopener">
+          <div class="src"><span>Sinar Harian · Podcast Terus Terang</span><span>2026</span></div>
+          <h3 data-ms>Wawancara: tanah dan persoalan cinta negara</h3>
+          <h3 data-en>Interview: land and the question of patriotism</h3>
+          <p data-ms>Perbualan panjang bersama Sinar Harian tentang isu tanah dan perjuangan saya.</p>
+          <p data-en>A long-form conversation with Sinar Harian about land issues and my work.</p>
+          <span class="read"><span data-ms>Tonton / baca</span><span data-en>Watch / read (Malay)</span> ↗</span>
+        </a>
+        <a href="https://tvpertiwi.com/2026/08/12/apa-kata-buat-rci-pencerobohan-tanah-rumah-anutan-haram-tamim/" target="_blank" rel="noopener">
+          <div class="src"><span>TV Pertiwi</span><span>12.08.2026</span></div>
+          <h3 data-ms>Cadangan RCI terhadap pencerobohan tanah</h3>
+          <h3 data-en>A call for an RCI on land encroachment</h3>
+          <p data-ms>Laporan tentang cadangan saya supaya Suruhanjaya Siasatan Diraja meneliti pencerobohan tanah dan kesannya kepada hasil negeri serta pembangunan.</p>
+          <p data-en>Coverage of my proposal for a Royal Commission of Inquiry into land encroachment and its impact on state revenue and development.</p>
+          <span class="read"><span data-ms>Baca</span><span data-en>Read (Malay)</span> ↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="hubungi" class="contact">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="lot">Lot 05 — <span data-ms>Hubungi</span><span data-en>Contact</span></div>
+        <h2 data-ms>Ada isu tanah? <em>Mari berbincang.</em></h2>
+        <h2 data-en>A land issue? <em>Let's talk.</em></h2>
+      </div>
+      <div class="body-grid">
+        <div></div>
+        <div>
+          <a class="mail" href="mailto:developer@syumul.com">developer@syumul.com</a>
+          <div class="socials">
+            <a href="https://www.facebook.com/profile.php?id=61595037118604" target="_blank" rel="noopener">Facebook <span>↗</span></a>
+            <a href="https://www.threads.com/@tamimdahri.my" target="_blank" rel="noopener">Threads <span>@tamimdahri.my</span></a>
+            <a href="https://www.tiktok.com/@tamimdahrimy" target="_blank" rel="noopener">TikTok <span>@tamimdahrimy</span></a>
+            <a href="https://tanahmalaya.org" target="_blank" rel="noopener">Tanah Malaya <span>↗</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Tamim Dahri</span>
+    <span><a href="https://tanahmalaya.org" target="_blank" rel="noopener">tanahmalaya.org</a> · <a href="#top"><span data-ms>Ke atas</span><span data-en>Back to top</span> ↑</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement, btns=document.querySelectorAll('[data-set-lang]');
+  function set(l){
+    root.lang=l;
+    btns.forEach(function(b){b.setAttribute('aria-pressed', b.dataset.setLang===l)});
+    document.title = l==='en' ? 'Tamim Dahri — Land activist & technology builder' : 'Tamim Dahri — Aktivis tanah & pembina teknologi';
+    try{localStorage.setItem('lang',l)}catch(e){}
+  }
+  var q=new URLSearchParams(location.search).get('lang'), s=null;
+  try{s=localStorage.getItem('lang')}catch(e){}
+  set(q==='en'||q==='ms'?q:(s||'ms'));
+  btns.forEach(function(b){b.addEventListener('click',function(){set(b.dataset.setLang)})});
+})();
+</script>
+</body>
+</html>
